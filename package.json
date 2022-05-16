@@ -2,14 +2,16 @@
   "name": "react-modal-for-wealth-health",
   "version": "1.0.0",
   "description": "A modal for wealth health project",
-  "main": "Modal.js",
+  "main": "build/Modal.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/prasouk-ph/react-modal-for-wealth-health.git"
   },
   "homepage": "https://github.com/prasouk-ph/react-modal-for-wealth-health.git",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack --watch",
+    "build": "webpack"
   },
   "keywords": [
     "react",
@@ -28,5 +30,16 @@
   "license": "ISC",
   "engines": {
     "node": ">=10"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.10",
+    "@babel/plugin-proposal-object-rest-spread": "^7.17.3",
+    "@babel/plugin-transform-react-jsx": "^7.17.3",
+    "@babel/preset-env": "^7.17.10",
+    "babel-loader": "^8.2.5",
+    "css-loader": "^6.7.1",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.72.1",
+    "webpack-cli": "^4.9.2"
   }
 }
