@@ -46,4 +46,3 @@ export default App;
 ## Authors
 
 -   Prasouk
--   Léo (design)
