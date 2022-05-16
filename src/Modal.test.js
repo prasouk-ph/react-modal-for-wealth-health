@@ -1,5 +1,5 @@
-/* eslint-disable testing-library/no-node-access */
-/* eslint-disable testing-library/no-debugging-utils */
+import React from 'react'
+import '@testing-library/jest-dom'
 import { render, screen, fireEvent } from '@testing-library/react'
 import Modal from './Modal'
 
