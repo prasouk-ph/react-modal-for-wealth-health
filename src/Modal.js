@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom';
 import './Modal.css';
 
 
-function Modal({ isActive, onClose, message, contentClassName, textClassname, buttonsClassName, footerClassName }) {
+function Modal({ isActive, onClose, message, contentClassName, textClassName, buttonsClassName, footerClassName }) {
   const modalContentClassName = contentClassName ? `react-modal-for-wealth-health__modal-content ${contentClassName}` : "react-modal-for-wealth-health__modal-content"
-  const modalTextClassName = textClassname ? `react-modal-for-wealth-health__modal-text ${textClassname}` : "react-modal-for-wealth-health__modal-text"
+  const modalTextClassName = textClassName ? `react-modal-for-wealth-health__modal-text ${textClassName}` : "react-modal-for-wealth-health__modal-text"
   const modalButtonsCloseClassName = buttonsClassName ? `react-modal-for-wealth-health__modal-button-close ${buttonsClassName }` : "react-modal-for-wealth-health__modal-button-close"
   const modalFooterClassName = footerClassName ? `react-modal-for-wealth-health__modal-footer ${footerClassName}` : "react-modal-for-wealth-health__modal-footer"
 
