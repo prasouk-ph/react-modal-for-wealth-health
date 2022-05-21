@@ -27,7 +27,7 @@ describe('When the modal is active', () => {
   describe('when I click on the modal body', () => {
     it('should keep the modal active and not call onClose function', () => {
       setup()
-      const modalContent = document.querySelector('.modal-content')
+      const modalContent = document.querySelector('.react-modal-for-wealth-health__modal-content')
       modalContent.click()
       
       expect(mockOnClose).not.toBeCalled()
@@ -57,7 +57,7 @@ describe('When the modal is active', () => {
   describe('when I click outside modal body', () => {
     it('should call onClose function”', () => {
       setup()
-      const modalContent = document.querySelector('.modal')
+      const modalContent = document.querySelector('.react-modal-for-wealth-health__modal')
       modalContent.click()
       
       expect(mockOnClose).toBeCalled()

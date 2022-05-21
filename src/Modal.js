@@ -3,7 +3,12 @@ import ReactDOM from 'react-dom';
 import './Modal.css';
 
 
-function Modal({ isActive, onClose, message }) {
+function Modal({ isActive, onClose, message, contentClassName, textClassname, buttonsClassName, footerClassName }) {
+  const modalContentClassName = contentClassName ? `react-modal-for-wealth-health__modal-content ${contentClassName}` : "react-modal-for-wealth-health__modal-content"
+  const modalTextClassName = textClassname ? `react-modal-for-wealth-health__modal-text ${textClassname}` : "react-modal-for-wealth-health__modal-text"
+  const modalButtonsCloseClassName = buttonsClassName ? `react-modal-for-wealth-health__modal-button-close ${buttonsClassName }` : "react-modal-for-wealth-health__modal-button-close"
+  const modalFooterClassName = footerClassName ? `react-modal-for-wealth-health__modal-footer ${footerClassName}` : "react-modal-for-wealth-health__modal-footer"
+
   function closeModalWithKeyboard(event) {
     if (event.key === "Escape") {
       document.body.removeEventListener('keydown', closeModalWithKeyboard)
@@ -26,16 +31,16 @@ function Modal({ isActive, onClose, message }) {
   }
 
   return ReactDOM.createPortal(
-    <div className="modal" onClick={onClose}>
-      <div className="modal-content" onClick={event => event.stopPropagation()}> {/* prevent modal closing when click on modal content */}
-        <button onClick={onClose} className="modal-button-close modal-icon-close" name="secondary-close">X</button>
+    <div className="react-modal-for-wealth-health__modal" onClick={onClose}>
+      <div className={modalContentClassName} onClick={event => event.stopPropagation()}> {/* prevent modal closing when click on modal content */}
+        <button onClick={onClose} className={`${modalButtonsCloseClassName} react-modal-for-wealth-health__modal-icon-close`} name="secondary-close">X</button>
 
-        <div className="modal-body">
-          <p>{message}</p>
+        <div className="react-modal-for-wealth-health__modal-body">
+          <p className={modalTextClassName}>{message}</p>
         </div>
 
-        <div className="modal-footer">
-          <button onClick={onClose} className="modal-button-close" name="main-close">Close</button>
+        <div className={modalFooterClassName}>
+          <button onClick={onClose} className={modalButtonsCloseClassName} name="main-close">Close</button>
         </div> 
       </div>
     </div>,
