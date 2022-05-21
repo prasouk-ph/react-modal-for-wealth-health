@@ -9,10 +9,23 @@ To install it, you need to use npm in your project :
 
 ## Example
 
-To use it, you need to import the component and react useState, after that set the following attributes :
-isActive
-onClose
-message
+To use it, you need to import the component and react useState, after that set the required props:
+
+-   isActive
+    You have to put a function that will set modalIsActive true
+
+-   onClose
+    You have to put a function that will set modalIsActive false
+
+-   message
+    You have to put a function or a string that will be display in the modal
+
+There are optionals props to customize the style:
+
+-   contentClassName
+-   textClassName
+-   buttonsClassName
+-   footerClassName
 
 For example, in your component :
 
@@ -36,7 +49,7 @@ function closeModal() {
   return (
     <div>
       <button onClick={openModal}>Show modal</button>
-      <Modal isActive={IsActive} onClose={closeModal} message={modalMessage} />
+      <Modal isActive={IsActive} onClose={closeModal} message={modalMessage} textClassName="foo" />
     </div>
   );
 }
