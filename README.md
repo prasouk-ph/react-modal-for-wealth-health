@@ -11,13 +11,13 @@ To install it, you need to use npm in your project :
 
 To use it, you need to import the component and react useState, after that set the required props:
 
--   isActive
+-   isActive:
     You have to put a function that will set modalIsActive true
 
--   onClose
+-   onClose:
     You have to put a function that will set modalIsActive false
 
--   message
+-   message:
     You have to put a function or a string that will be display in the modal
 
 There are optionals props to customize the style:
