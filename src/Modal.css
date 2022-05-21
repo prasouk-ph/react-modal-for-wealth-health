@@ -1,4 +1,4 @@
-.modal {
+.react-modal-for-wealth-health__modal {
   position: fixed;
   left: 0;
   top: 0;
@@ -10,14 +10,14 @@
   align-items: center;
 }
 
-.modal-content {
+.react-modal-for-wealth-health__modal-content {
   background-color: white;
   padding: 3vw;
   border-radius: 5px;
   position: relative;
 }
 
-.modal-button-close {
+.react-modal-for-wealth-health__modal-button-close {
   background-color: #6D850F;
   border: none;
   border-radius: 5px;
@@ -28,7 +28,7 @@
   cursor: pointer;
 }
 
-.modal-icon-close {
+.react-modal-for-wealth-health__modal-icon-close {
   border-radius: 50%;
   width: 25px;
   position: absolute;
