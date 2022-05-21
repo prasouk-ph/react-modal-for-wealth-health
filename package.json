@@ -1,6 +1,6 @@
 {
   "name": "react-modal-for-wealth-health",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A modal for wealth health project",
   "main": "build/Modal.js",
   "repository": {
